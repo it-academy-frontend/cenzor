@@ -1,0 +1,47 @@
+<p>lesson01 works!</p>
+<!-- Data binding -->
+
+<!-- Інтерполяція -->
+<h2>Hello {{ name }}</h2>
+<h2>{{'Hello ' + name }}</h2>
+<h3>index = {{ index + 1 }}</h3>
+<h4>St {{ status }}</h4>
+<h4>Names {{ arrNames[1] }}</h4>
+<h4>Names length = {{ arrNames.length }}</h4>
+<h4>Car = {{ myCar.mark }} {{ myCar.model }}</h4>
+<h3>Message: {{ sayHello() }}</h3>
+<h3>New mes = {{ printMessage() }}</h3>
+<h3>New mes = {{ printMessage('Hi') }}</h3>
+
+<hr>
+
+<a [href]="myLink">{{ myNameLink }}</a>
+<br>
+<a bind-href="myLink">{{ myNameLink }}</a>
+<br>
+<a [attr.href]="myLink" [textContent]="myNameLink"></a>
+
+<hr>
+<h2 class="text red">Some text</h2>
+<hr>
+<h2 [class]="classes">Some text</h2>
+<hr>
+<h2 [class.text]="isAddClass">Some text</h2>
+
+<button (click)="checkClass()">click 1</button>
+<button on-click="checkClass()">click 2</button>
+<hr>
+<button (click)="show($event)">show</button>
+<hr>
+<button (click)="changeStyle()">change</button>
+<h2 [style.color]="isColor ? 'red' : 'green'">Some text style</h2>
+
+
+<hr>
+<input type="text" [(ngModel)]="login" name="login">
+<button (click)="showLogin()">show login</button>
+<h2>Login = {{ login }}</h2>
+
+<!-- ng build --prod --base-href "https://<username>.github.io/<reponame>/" -->
+
+<!-- ngh --dir dist/<project-name> -->
